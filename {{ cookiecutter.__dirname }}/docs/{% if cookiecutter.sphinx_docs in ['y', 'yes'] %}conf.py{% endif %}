@@ -19,27 +19,15 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
-    "sphinx.ext.todo",
 ]
 
-# TODO: Please Read!
-# Uncomment the below if you use native CircuitPython modules such as
-# digitalio, micropython and busio. List the modules you use. Without it, the
-# autodoc module docs will fail to generate with a warning.
-# autodoc_mock_imports = ["digitalio", "busio"]
 
 autodoc_preserve_defaults = True
 
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
-    {%- if cookiecutter.requires_bus_device in ["y", "yes"] -%}
-    "BusDevice": ("https://docs.circuitpython.org/projects/busdevice/en/latest/", None),
-    {% endif %}
-    {%- if cookiecutter.requires_register in ["y", "yes"] -%}
-    "Register": ("https://docs.circuitpython.org/projects/register/en/latest/", None),
-    {%- endif %}
-    "CircuitPython": ("https://docs.circuitpython.org/en/latest/", None),
+    "MicroPython": ("https://docs.micropython.org/en/latest/", None),
 }
 
 # Show the docstring from both the class and its __init__() method.
@@ -89,7 +77,6 @@ exclude_patterns = [
     "Thumbs.db",
     ".DS_Store",
     ".env",
-    "CODE_OF_CONDUCT.md",
 ]
 
 # The reST default role (used for this markup: `text`) to use for all
@@ -103,11 +90,7 @@ add_function_parentheses = True
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
-
-# If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
-
-# If this is True, todo emits a warning for each TODO entries. The default is False.
 todo_emit_warnings = True
 
 napoleon_numpy_docstring = False
@@ -143,7 +126,7 @@ html_static_path = ["_static"]
 html_favicon = "_static/favicon.ico"
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}CircuitPython_{{ cookiecutter.library_name | capitalize | replace(' ', '_')}}_Librarydoc"
+htmlhelp_basename = "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}MicroPython_{{ cookiecutter.library_name | capitalize | replace(' ', '_')}}_Librarydoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -164,8 +147,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}CircuitPython_{{ cookiecutter.library_name | replace(' ', '_')}}_Library.tex",
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}CircuitPython {{ cookiecutter.library_name }} Library Documentation",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}MicroPython_{{ cookiecutter.library_name | replace(' ', '_')}}_Library.tex",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}MicroPython {{ cookiecutter.library_name }} Library Documentation",
         author,
         "manual",
     ),
@@ -178,8 +161,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}CircuitPython_{{ cookiecutter.library_name | replace(' ', '_')}}_Library",
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}CircuitPython {{ cookiecutter.library_name }} Library Documentation",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}MicroPython_{{ cookiecutter.library_name | replace(' ', '_')}}_Library",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}MicroPython {{ cookiecutter.library_name }} Library Documentation",
         [author],
         1,
     ),
@@ -193,10 +176,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}CircuitPython_{{ cookiecutter.library_name | replace(' ', '_') }}_Library",
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}CircuitPython {{ cookiecutter.library_name }} Library Documentation",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}MicroPython_{{ cookiecutter.library_name | replace(' ', '_') }}_Library",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}MicroPython {{ cookiecutter.library_name }} Library Documentation",
         author,
-        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}CircuitPython_{{ cookiecutter.library_name | replace(' ', '_')}}_Library",
+        "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }}_{% endif %}MicroPython_{{ cookiecutter.library_name | replace(' ', '_')}}_Library",
         "One line description of project.",
         "Miscellaneous",
     ),
