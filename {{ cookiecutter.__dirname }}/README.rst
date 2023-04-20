@@ -29,6 +29,11 @@ Introduction
     :alt: Documentation Status
 {% endif %}
 
+.. image:: https://img.shields.io/pypi/v/micropython-{{ pypi_name }}.svg
+    :target: https://pypi.python.org/pypi/micropython-{{ pypi_name }}
+    :alt: PyPi Package
+
+
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
     :alt: Code Style: Black
