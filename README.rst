@@ -23,10 +23,8 @@ Prompts
 * ``github_user`` - GitHub user or organization which will host this repo. For example, Adafruit funded libraries should say "adafruit" here.
 * ``author_name`` - Who you are! Sets the copyright to you.
 * ``company`` - Used to give Copyright credit to the company funding the library. For example, Adafruit funded libraries should say "Adafruit Industries" here.
-* ``library_name`` - Shortest name for the library. Usually a chip name such as LIS3DH.
-* ``library_description`` - Write a sentence describing the purpose of this library (e.g. ``CircuitPython helper library for the DC & Stepper Motor FeatherWing, Shield and Pi Hat kits.``).
-* ``other_requirements`` - Adds any other module dependencies for PyPi. Enter a comma separated string of modules
-  (e.g. ``adafruit-circuitpython-pca9685, adafruit-circuitpython-motor``). NOTE: ``Adafruit-Blinka`` is always included, so no need to include it here.
+* ``library_name`` - Shortest name for the library.
+* ``library_description`` - Write a sentence describing the purpose of this library 
 * ``sphinx_docs`` - Should the Sphinx based documentation be included in your repo? If so, enter ``y`` or ``yes`` to include the setup.py. For Adafruit libraries this defaults to Yes.
 
 
