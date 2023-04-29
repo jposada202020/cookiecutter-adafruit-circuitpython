@@ -16,7 +16,6 @@
 {%- else -%}
     {%- set docs_url = 'https://circuitpython-' + cookiecutter.library_name | lower | replace(" ", "-") | replace("_", "-") + '.readthedocs.io/' -%}
 {%- endif -%}
-
 Introduction
 ============
 
@@ -43,14 +42,6 @@ Introduction
     :target: https://github.com/{{ full_repo_name }}/actions
     :alt: Build Status
 
-
-.. image:: https://img.shields.io/pypi/v/circuitpython-{{ cookiecutter.library_name }}.svg
-    :alt: latest version on PyPI
-    :target: https://pypi.python.org/pypi/circuitpython-{{ cookiecutter.library_name }}
-
-.. image:: https://static.pepy.tech/personalized-badge/circuitpython-{{ cookiecutter.library_name }}?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Pypi%20Downloads
-    :alt: Total PyPI downloads
-    :target: https://pepy.tech/project/circuitpython-{{ cookiecutter.library_name }}
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
@@ -80,9 +71,21 @@ This is easily achieved by downloading
 or individual libraries can be installed using
 `circup <https://github.com/adafruit/circup>`_.
 
+{%- if cookiecutter.target_bundle == 'Adafruit' %}
+
+.. todo:: Describe the Adafruit product this library works with. For PCBs, you can also add the
+image from the assets folder in the PCB's GitHub repo.
+
+`Purchase one from the Adafruit shop <http://www.adafruit.com/products/{{cookiecutter.adafruit_product_id}}>`_
+{% endif -%}
 
 Installing from PyPI
 =====================
+.. note:: This library is not available on PyPI yet. Install documentation is included
+   as a standard element. Stay tuned for PyPI availability!
+
+.. todo:: Remove the above note if PyPI version is/will be available at time of release.
+
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
 PyPI <https://pypi.org/project/{%- if cookiecutter.library_prefix -%}{{ cookiecutter.library_prefix }}-{%- endif -%}circuitpython-{{ pypi_name }}/>`_.
 To install for current user:
