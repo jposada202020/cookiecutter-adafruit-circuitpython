@@ -30,6 +30,13 @@ Introduction
     :alt: Documentation Status
 {% endif %}
 
+{% if cookiecutter.target_bundle == 'Adafruit' -%}
+.. image:: https://raw.githubusercontent.com/adafruit/Adafruit_CircuitPython_Bundle/main/badges/adafruit_discord.svg
+{%- else %}
+.. image:: https://img.shields.io/discord/327254708534116352.svg
+{%- endif %}
+    :target: https://adafru.it/discord
+    :alt: Discord
 
 
 .. image:: https://github.com/{{ full_repo_name }}/workflows/Build%20CI/badge.svg
