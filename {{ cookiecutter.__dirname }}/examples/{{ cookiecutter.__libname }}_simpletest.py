@@ -1,3 +1,3 @@
-# SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} {{ cookiecutter.author_name }}{% if cookiecutter.company %} for {{ cookiecutter.company }}{% endif %}
+# SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} Jose D. Montoya
 #
 # SPDX-License-Identifier: MIT
