@@ -38,13 +38,13 @@ Introduction
     :alt: Discord
 
 
-.. image:: https://img.shields.io/pypi/v/{{ pypi_name }}.svg
+.. image:: https://img.shields.io/pypi/v/circuitpython-{{ pypi_name }}.svg
     :alt: latest version on PyPI
-    :target: https://pypi.python.org/pypi/{{ pypi_name }}
+    :target: https://pypi.python.org/pypi/circuitpython-{{ pypi_name }}
 
-.. image:: https://static.pepy.tech/personalized-badge/{{ pypi_name }}?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Pypi%20Downloads
+.. image:: https://static.pepy.tech/personalized-badge/circuitpython-{{ pypi_name }}?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Pypi%20Downloads
     :alt: Total PyPI downloads
-    :target: https://pepy.tech/project/{{ pypi_name }}
+    :target: https://pepy.tech/project/circuitpython-{{ pypi_name }}
 
 
 .. image:: https://github.com/{{ full_repo_name }}/workflows/Build%20CI/badge.svg
