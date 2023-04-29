@@ -71,8 +71,6 @@ This is easily achieved by downloading
 or individual libraries can be installed using
 `circup <https://github.com/adafruit/circup>`_.
 
-{%- if cookiecutter.target_bundle == 'Adafruit' %}
-
 
 Installing from PyPI
 =====================
