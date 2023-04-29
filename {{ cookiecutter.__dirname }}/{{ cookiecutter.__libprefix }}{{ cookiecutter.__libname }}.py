@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} {{ cookiecutter.author_name }}{% if cookiecutter.company %} for {{ cookiecutter.company }}{% endif %}
+# SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} {{ cookiecutter.author_name }}
 #
 # SPDX-License-Identifier: MIT
 """
@@ -11,7 +11,7 @@
 .. todo:: Describe what the library does.
 {% endif %}
 
-* Author(s): {{ cookiecutter.author_name }}
+* Author(s): Jose D. Montoya
 
 
 """
