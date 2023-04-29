@@ -30,9 +30,19 @@ Introduction
     :alt: Documentation Status
 {% endif %}
 
+{% if cookiecutter.target_bundle == 'Adafruit' -%}
+.. image:: https://raw.githubusercontent.com/adafruit/Adafruit_CircuitPython_Bundle/main/badges/adafruit_discord.svg
+{%- else %}
+.. image:: https://img.shields.io/discord/327254708534116352.svg
+{%- endif %}
+    :target: https://adafru.it/discord
+    :alt: Discord
+
+
 .. image:: https://github.com/{{ full_repo_name }}/workflows/Build%20CI/badge.svg
     :target: https://github.com/{{ full_repo_name }}/actions
     :alt: Build Status
+
 
 .. image:: https://img.shields.io/pypi/v/circuitpython-{{ cookiecutter.library_name }}.svg
     :alt: latest version on PyPI
@@ -41,7 +51,6 @@ Introduction
 .. image:: https://static.pepy.tech/personalized-badge/circuitpython-{{ cookiecutter.library_name }}?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Pypi%20Downloads
     :alt: Total PyPI downloads
     :target: https://pepy.tech/project/circuitpython-{{ cookiecutter.library_name }}
-
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
