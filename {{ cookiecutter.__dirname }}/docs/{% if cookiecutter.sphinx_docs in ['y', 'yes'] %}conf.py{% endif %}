@@ -75,7 +75,7 @@ pygments_style = "sphinx"
 todo_include_todos = False
 todo_emit_warnings = False
 napoleon_numpy_docstring = False
-html_baseurl = "https://circuitpython-" + "{{ cookiecutter.library_name }}" + ".readthedocs.io/"
+html_baseurl = "https://circuitpython-{{ cookiecutter.library_name }}.readthedocs.io/"
 rst_prolog = """
 .. role:: python(code)
    :language: python
@@ -112,16 +112,16 @@ html_theme_options = {
         },
     ],
     # Set the repo location to get a badge with stats
-    "repo_url": "https://github.com/jposada202020/CircuitPython_" + "{{ cookiecutter.library_name | capitalize }}" + "/",
-    "repo_name": "CircuitPython " + "{{ cookiecutter.library_name | capitalize }}",
+    "repo_url": "https://github.com/jposada202020/CircuitPython_{{ cookiecutter.library_name | capitalize }}/",
+    "repo_name": "CircuitPython {{ cookiecutter.library_name | capitalize }}",
     "social": [
         {
             "icon": "fontawesome/brands/github",
-            "link": "https://github.com/jposada202020/CircuitPython_" + "{{ cookiecutter.library_name | capitalize }}",
+            "link": "https://github.com/jposada202020/CircuitPython_{{ cookiecutter.library_name | capitalize }}",
         },
         {
             "icon": "fontawesome/brands/python",
-            "link": "https://pypi.org/project/circuitpython-"+ "{{ cookiecutter.library_name }}" + "/",
+            "link": "https://pypi.org/project/circuitpython-{{ cookiecutter.library_name }}/",
         },
         {
             "name": "CircuitPython Downloads",
