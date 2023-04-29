@@ -36,7 +36,7 @@ templates_path = ["_templates"]
 source_suffix = ".rst"
 master_doc = "index"
 # General information about the project.
-project = "{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}{% endif %}CircuitPython {{ cookiecutter.library_name }} Library"
+project = "{% if cookiecutter.target_bundle != 'CircuitPython Org' %}{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | capitalize }} {% endif %}{% endif %}CircuitPython {{ cookiecutter.library_name }} Library"
 creation_year = "{% now 'utc', '%Y' %}"
 current_year = str(datetime.datetime.now().year)
 year_duration = (
