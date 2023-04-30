@@ -11,7 +11,8 @@
 {%- do kw_list.kw_list.extend(wrapped.split("\n")) -%}
 {# create repo and pypi names #}
 {%- set repo_name = 'CircuitPython_' -%}
-{%- set pypi_name = repo_name|lower|replace("_", "-")|replace(" ", "-")|replace("circuitpython-org-", "circuitpython-") -%}
+{%- set repo_name = repo_name + cookiecutter.library_name | replace(" ", "_") -%}
+{%- set pypi_name = repo_name|lower|replace("_", "-")|replace(" ", "-")|replace("Circuitpython_", "circuitpython-") -%}
 
 [build-system]
 requires = [
@@ -26,7 +27,7 @@ description = "{{ cookiecutter.library_description }}"
 version = "0.0.0+auto.0"
 readme = "README.rst"
 authors = [
-    name = "Jose D. Montoya", email = "jlib@mailmeto.mozmail.com"
+    {name = "Jose D. Montoya", email = "jlib@mailmeto.mozmail.com"}
 ]
 urls = {Homepage = "https://github.com/jposada202020/CircuitPython_{{ pypi_name | upper }}"}
 keywords = [
