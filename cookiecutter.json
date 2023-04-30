@@ -13,6 +13,6 @@
     "other_requirements": "",
     "sphinx_docs":  "{%- if cookiecutter.target_bundle == 'Adafruit' or cookiecutter.target_bundle == 'CircuitPython Org' -%} yes {%- else -%} no {%- endif -%}",
     "_extensions": ["jinja2.ext.do"],
-    "__dirname": "CircuitPython_{{ cookiecutter.library_name|replace(' ', '_') }}",
+    "__dirname": "CircuitPython_{{ cookiecutter.library_name| upper |replace(' ', '_') }}",
     "__libname": "{{ cookiecutter.library_name | lower | replace(' ', '_') }}"
 }
