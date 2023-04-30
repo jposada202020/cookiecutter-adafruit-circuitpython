@@ -7,6 +7,7 @@
 {%- set kw_list = namespace(kw_list=[], default=["adafruit", "blinka", "circuitpython", "micropython"]) -%}
 {%- do kw_list.default.append(cookiecutter.library_name|lower|replace(" ", "-")) -%}
 {%- set user_kws = cookiecutter.library_keywords.split(" ") -%}
+{%- set pypi_name = cookiecutter.library_name|lower|replace("_", "-")|replace(" ", "-") -%}
 {%- do kw_list.default.extend(user_kws|reject("==", "")) -%}
 {%- set wrapped = kw_list.default|unique|join(" ")|wordwrap(break_long_words=False) -%}
 {%- do kw_list.kw_list.extend(wrapped.split("\n")) -%}
@@ -51,7 +52,7 @@ readme = "README.rst"
 authors = [
     {name = "{{ lib_author_name }}"{% if  lib_author_email != "" %}, email = "{{ lib_author_email }}"{% endif -%} }
 ]
-urls = {Homepage = "https://github.com/{{ cookiecutter.github_user }}/{{ repo_name }}"}
+urls = {Homepage = "https://github.com/{{ cookiecutter.github_user }}/CircuitPython_{{ pypi_name | upper }}"}
 keywords = [
 {% for kw_list_keyword in kw_list.default %}    "{{ kw_list_keyword }}",
 {% endfor -%}

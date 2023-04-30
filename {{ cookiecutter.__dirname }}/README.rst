@@ -38,8 +38,8 @@ Introduction
     :target: https://pepy.tech/project/circuitpython-{{ pypi_name }}
 
 
-.. image:: https://github.com/{{ full_repo_name }}/workflows/Build%20CI/badge.svg
-    :target: https://github.com/{{ full_repo_name }}/actions
+.. image:: https://github.com/CircuitPython_{{ pypi_name | upper }}/workflows/Build%20CI/badge.svg
+    :target: https://github.com/CircuitPython_{{ pypi_name | upper }}/actions
     :alt: Build Status
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
