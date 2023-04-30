@@ -22,7 +22,6 @@ Prompts
 * ``target_bundle`` - Adafruit bundle or Community library bundle
 * ``github_user`` - GitHub user or organization which will host this repo. For example, Adafruit funded libraries should say "adafruit" here.
 * ``author_name`` - Who you are! Sets the copyright to you.
-* ``company`` - Used to give Copyright credit to the company funding the library. For example, Adafruit funded libraries should say "Adafruit Industries" here.
 * ``library_name`` - Shortest name for the library.
 * ``library_description`` - Write a sentence describing the purpose of this library 
 * ``sphinx_docs`` - Should the Sphinx based documentation be included in your repo? If so, enter ``y`` or ``yes`` to include the setup.py. For Adafruit libraries this defaults to Yes.

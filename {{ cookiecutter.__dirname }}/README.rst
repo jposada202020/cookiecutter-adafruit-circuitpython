@@ -29,15 +29,6 @@ Introduction
     :alt: Documentation Status
 {% endif %}
 
-{% if cookiecutter.target_bundle == 'Adafruit' -%}
-.. image:: https://raw.githubusercontent.com/adafruit/Adafruit_CircuitPython_Bundle/main/badges/adafruit_discord.svg
-{%- else %}
-.. image:: https://img.shields.io/discord/327254708534116352.svg
-{%- endif %}
-    :target: https://adafru.it/discord
-    :alt: Discord
-
-
 .. image:: https://img.shields.io/pypi/v/circuitpython-{{ pypi_name }}.svg
     :alt: latest version on PyPI
     :target: https://pypi.python.org/pypi/circuitpython-{{ pypi_name }}
@@ -50,7 +41,6 @@ Introduction
 .. image:: https://github.com/{{ full_repo_name }}/workflows/Build%20CI/badge.svg
     :target: https://github.com/{{ full_repo_name }}/actions
     :alt: Build Status
-
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
@@ -133,15 +123,12 @@ Or the following command to update an existing version:
 Usage Example
 =============
 
-.. todo:: Add a quick, simple example. It and other examples should live in the
-examples folder and be included in docs/examples.rst.
+Take a look at the examples directory
 
 Documentation
 =============
 API documentation for this library can be found on `Read the Docs <{{ docs_url }}>`_.
 
-For information on building library documentation, please check out
-`this guide <https://learn.adafruit.com/creating-and-sharing-a-circuitpython-library/sharing-our-docs-on-readthedocs#sphinx-5-1>`_.
 
 Contributing
 ============

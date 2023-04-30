@@ -75,7 +75,7 @@ pygments_style = "sphinx"
 todo_include_todos = False
 todo_emit_warnings = False
 napoleon_numpy_docstring = False
-html_baseurl = "https://circuitpython-{{ cookiecutter.library_name | upper }}.readthedocs.io/"
+html_baseurl = "https://circuitpython-{{ cookiecutter.library_name}}.readthedocs.io/"
 rst_prolog = """
 .. role:: python(code)
    :language: python
@@ -178,7 +178,7 @@ object_description_options = [
     ("py:.*", dict(generate_synopses="first_sentence")),
 ]
 # Set link name generated in the top bar.
-html_title = "CircuitPython " + "{{ cookiecutter.library_name | capitalize }}"
+html_title = "CircuitPython {{ cookiecutter.library_name | upper }}"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
