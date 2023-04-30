@@ -33,9 +33,9 @@ __repo__ = "https://github.com/{{ cookiecutter.github_user }}/CircuitPython_{{ c
 
 
 class {{ cookiecutter.library_name | upper }}:
-    """Driver for the {{ pypi_name | upper }} Sensor connected over I2C.
+    """Driver for the {{ cookiecutter.library_name | upper }} Sensor connected over I2C.
 
-    :param ~busio.I2C i2c_bus: The I2C bus the {{ pypi_name | upper }} is connected to.
+    :param ~busio.I2C i2c_bus: The I2C bus the {{ cookiecutter.library_name | upper }} is connected to.
     :param int address: The I2C device address. Defaults to :const:`0x69`
 
     :raises RuntimeError: if the sensor is not found
