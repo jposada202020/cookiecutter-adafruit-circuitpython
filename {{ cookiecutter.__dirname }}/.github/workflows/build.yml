@@ -57,7 +57,7 @@ jobs:
         id: repo-name
         run: |
           echo repo-name=$(
-          echo ${{ github.repository }} |
+          echo {% raw %}${{ github.repository }}{% endraw %} |
           awk -F '\/' '{ print tolower($2) }' |
           tr '_' '-'
           ) >> $GITHUB_OUTPUT
