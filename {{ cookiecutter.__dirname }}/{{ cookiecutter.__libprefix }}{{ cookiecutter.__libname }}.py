@@ -1,9 +1,8 @@
-{%- set pypi_name = cookiecutter.library_name|lower|replace("_", "-")|replace(" ", "-") -%}
 # SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} Jose D. Montoya
 #
 # SPDX-License-Identifier: MIT
 """
-`{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | lower | replace(" ", "_") }}_{% endif %}{{ cookiecutter.library_name | lower | replace(" ", "_") }}`
+`{{ cookiecutter.library_name | lower | replace(" ", "_") }}`
 ================================================================================
 
 {% if cookiecutter.library_description != "" %}
@@ -28,24 +27,12 @@ try:
 except ImportError:
     pass
 
-{% if cookiecutter.target_bundle != 'CircuitPython Org' -%}
-    {%- if cookiecutter.library_prefix -%}
-        {%- set repo_name = (cookiecutter.library_prefix | capitalize) -%}
-        {%- set repo_name = repo_name + '_CircuitPython_' -%}
-        {%- set repo_name = repo_name + cookiecutter.library_name | replace(" ", "_") -%}
-    {%- else -%}
-        {%- set repo_name = 'CircuitPython_' -%}
-        {%- set repo_name = repo_name + cookiecutter.library_name | replace(" ", "_") -%}
-    {%- endif -%}
-{% else -%}
-    {%- set repo_name = 'CircuitPython_Org_' + cookiecutter.library_name | replace(" ", "_") -%}
-{% endif -%}
 
 __version__ = "0.0.0+auto.0"
-__repo__ = "https://github.com/{{ cookiecutter.github_user }}/CircuitPython_{{ pypi_name | upper }}.git"
+__repo__ = "https://github.com/{{ cookiecutter.github_user }}/CircuitPython_{{ cookiecutter.library_name | upper }}.git"
 
 
-class {{ pypi_name | upper }}:
+class {{ cookiecutter.library_name | upper }}:
     """Driver for the {{ pypi_name | upper }} Sensor connected over I2C.
 
     :param ~busio.I2C i2c_bus: The I2C bus the {{ pypi_name | upper }} is connected to.
@@ -55,20 +42,20 @@ class {{ pypi_name | upper }}:
 
     **Quickstart: Importing and using the device**
 
-    Here is an example of using the :class:`{{ pypi_name | upper }}` class.
+    Here is an example of using the :class:`{{ cookiecutter.library_name | upper }}` class.
     First you will need to import the libraries to use the sensor
 
     .. code-block:: python
 
         import board
-        import {{ pypi_name }}
+        import {{ cookiecutter.library_name}}
 
     Once this is done you can define your `board.I2C` object and define your sensor object
 
     .. code-block:: python
 
         i2c = board.I2C()  # uses board.SCL and board.SDA
-        {{ pypi_name }} = {{ pypi_name | upper }}.{{ pypi_name | upper }}(i2c)
+        {{ cookiecutter.library_name }} = {{ cookiecutter.library_name | upper }}.{{ cookiecutter.library_name }}(i2c)
 
     Now you have access to the attributes
 
@@ -80,4 +67,4 @@ class {{ pypi_name | upper }}:
         self.i2c_device = i2c_device.I2CDevice(i2c_bus, address)
 
         if self._device_id != xxx:
-            raise RuntimeError("Failed to find {{ pypi_name | upper }}")
+            raise RuntimeError("Failed to find {{ cookiecutter.library_name | upper }}")

@@ -7,7 +7,7 @@ Introduction
 ============
 
 {% if cookiecutter.sphinx_docs | lower in ["yes", "y"] %}
-.. image:: https://readthedocs.org/projects/{% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix | lower | replace("_", "-")}}-{% endif %}circuitpython-{{ cookiecutter.library_name | lower | replace(" ", "-") | replace("_", "-") }}/badge/?version=latest
+.. image:: https://readthedocs.org/projects/circuitpython-{{ cookiecutter.library_name | lower | replace(" ", "-") | replace("_", "-") }}/badge/?version=latest
 {%- if cookiecutter.target_bundle == 'Adafruit' %}
     :target: {{ docs_url }}
 {%- else %}
@@ -61,18 +61,18 @@ Installing from PyPI
 =====================
 
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
-PyPI <https://pypi.org/project/{%- if cookiecutter.library_prefix -%}{{ cookiecutter.library_prefix }}-{%- endif -%}circuitpython-{{ pypi_name }}/>`_.
+PyPI <https://pypi.org/project/circuitpython-{{ pypi_name }}/>`_.
 To install for current user:
 
 .. code-block:: shell
 
-    pip3 install {% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix }}-{% endif %}circuitpython-{{ pypi_name }}
+    pip3 install circuitpython-{{ pypi_name }}
 
 To install system-wide (this may be required in some cases):
 
 .. code-block:: shell
 
-    sudo pip3 install {% if cookiecutter.library_prefix %}{{ cookiecutter.library_prefix }}-{% endif %}circuitpython-{{ pypi_name }}
+    sudo pip3 install circuitpython-{{ pypi_name }}
 
 To install in a virtual environment in your current project:
 
@@ -81,7 +81,7 @@ To install in a virtual environment in your current project:
     mkdir project-name && cd project-name
     python3 -m venv .venv
     source .env/bin/activate
-    pip3 install {% if cookiecutter.library_prefix -%}{{ cookiecutter.library_prefix }}-{% endif -%}circuitpython-{{ pypi_name }}
+    pip3 install circuitpython-{{ pypi_name }}
 
 Installing to a Connected CircuitPython Device with Circup
 ==========================================================
