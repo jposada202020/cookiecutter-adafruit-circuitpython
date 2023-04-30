@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} {{ cookiecutter.author_name }}
+# SPDX-FileCopyrightText: Copyright (c) {% now 'utc', '%Y' %} Jose D. Montoya
 #
 # SPDX-License-Identifier: MIT
 
-{% set req_list = namespace(items=["Adafruit-Blinka"]) %}
+Adafruit-Blinka
