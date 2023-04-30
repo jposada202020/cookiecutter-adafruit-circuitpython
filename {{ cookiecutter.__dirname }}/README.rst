@@ -1,5 +1,5 @@
 {%- set repo_name = 'CircuitPython_' -%}
-{%- set full_repo_name = cookiecutter.github_user + "/" + repo_name -%}
+{%- set full_repo_name = "jposada202020" + "/" + repo_name -%}
 {%- set pypi_name = cookiecutter.library_name|lower|replace("_", "-")|replace(" ", "-") -%}
 {%- set docs_url = 'https://circuitpython-' + cookiecutter.library_name | lower | replace(" ", "-") | replace("_", "-") + '.readthedocs.io/' -%}
 
@@ -52,7 +52,7 @@ This driver depends on:
 
 Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
-`the Adafruit library and driver bundle <https://circuitpython.org/libraries>`_
+`the Community Bundle library and driver bundle <https://circuitpython.org/libraries>`_
 or individual libraries can be installed using
 `circup <https://github.com/adafruit/circup>`_.
 
@@ -61,18 +61,18 @@ Installing from PyPI
 =====================
 
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
-PyPI <https://pypi.org/project/circuitpython-{{ pypi_name }}/>`_.
+PyPI <https://pypi.org/project/circuitpython-{{ cookiecutter.library_name }}/>`_.
 To install for current user:
 
 .. code-block:: shell
 
-    pip3 install circuitpython-{{ pypi_name }}
+    pip3 install circuitpython-{{ cookiecutter.library_name }}
 
 To install system-wide (this may be required in some cases):
 
 .. code-block:: shell
 
-    sudo pip3 install circuitpython-{{ pypi_name }}
+    sudo pip3 install circuitpython-{{ cookiecutter.library_name }}
 
 To install in a virtual environment in your current project:
 
@@ -81,7 +81,7 @@ To install in a virtual environment in your current project:
     mkdir project-name && cd project-name
     python3 -m venv .venv
     source .env/bin/activate
-    pip3 install circuitpython-{{ pypi_name }}
+    pip3 install circuitpython-{{ cookiecutter.library_name }}
 
 Installing to a Connected CircuitPython Device with Circup
 ==========================================================
@@ -98,7 +98,7 @@ following command to install:
 
 .. code-block:: shell
 
-    circup install {{ cookiecutter.__libprefix }}{{ cookiecutter.__libname }}
+    circup install {{ cookiecutter.library_name }}
 
 Or the following command to update an existing version:
 

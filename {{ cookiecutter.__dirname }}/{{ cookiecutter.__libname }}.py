@@ -29,7 +29,7 @@ except ImportError:
 
 
 __version__ = "0.0.0+auto.0"
-__repo__ = "https://github.com/{{ cookiecutter.github_user }}/CircuitPython_{{ cookiecutter.library_name | upper }}.git"
+__repo__ = "https://github.com/jposada202020/CircuitPython_{{ cookiecutter.library_name | upper }}.git"
 
 
 class {{ cookiecutter.library_name | upper }}:
