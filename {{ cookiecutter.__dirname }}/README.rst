@@ -1,21 +1,8 @@
-{%- if cookiecutter.target_bundle != 'CircuitPython Org' -%}
-    {%- if cookiecutter.library_prefix -%}
-        {%- set repo_name = (cookiecutter.library_prefix | capitalize) -%}
-        {%- set repo_name = repo_name + '_CircuitPython_' -%}
-    {%- else -%}
-        {%- set repo_name = 'CircuitPython_' -%}
-    {%- endif -%}
-    {%- set repo_name = repo_name + cookiecutter.library_name | replace(" ", "_") -%}
-{%- else -%}
-    {%- set repo_name = 'CircuitPython_Org_' + cookiecutter.library_name | replace(" ", "_") -%}
-{%- endif -%}
+{%- set repo_name = 'CircuitPython_' -%}
 {%- set full_repo_name = cookiecutter.github_user + "/" + repo_name -%}
 {%- set pypi_name = cookiecutter.library_name|lower|replace("_", "-")|replace(" ", "-") -%}
-{%- if cookiecutter.target_bundle == 'Adafruit' -%}
-    {%- set docs_url = 'https://docs.circuitpython.org/projects/' + cookiecutter.library_name | lower | replace(" ", "-") + '/en/latest/' -%}
-{%- else -%}
-    {%- set docs_url = 'https://circuitpython-' + cookiecutter.library_name | lower | replace(" ", "-") | replace("_", "-") + '.readthedocs.io/' -%}
-{%- endif -%}
+{%- set docs_url = 'https://circuitpython-' + cookiecutter.library_name | lower | replace(" ", "-") | replace("_", "-") + '.readthedocs.io/' -%}
+
 Introduction
 ============
 
@@ -36,7 +23,6 @@ Introduction
 .. image:: https://static.pepy.tech/personalized-badge/circuitpython-{{ pypi_name }}?period=total&units=international_system&left_color=grey&right_color=blue&left_text=Pypi%20Downloads
     :alt: Total PyPI downloads
     :target: https://pepy.tech/project/circuitpython-{{ pypi_name }}
-
 
 .. image:: https://github.com/CircuitPython_{{ pypi_name | upper }}/workflows/Build%20CI/badge.svg
     :target: https://github.com/CircuitPython_{{ pypi_name | upper }}/actions
