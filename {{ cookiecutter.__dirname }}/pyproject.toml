@@ -20,7 +20,7 @@ requires = [
 ]
 
 [project]
-name = "{{ lib_touse }}"
+name = "circuitpython-{{ lib_touse }}"
 description = "{{ cookiecutter.library_description }}"
 version = "0.0.0+auto.0"
 readme = "README.rst"
@@ -44,8 +44,6 @@ classifiers = [
 dynamic = ["dependencies", "optional-dependencies"]
 
 [tool.setuptools]
-# TODO: IF LIBRARY FILES ARE A PACKAGE FOLDER,
-#       CHANGE `py_modules = ['...']` TO `packages = ['...']`
 py-modules = ["{{ lib_touse }}"]
 
 [tool.setuptools.dynamic]

@@ -24,8 +24,8 @@ Introduction
     :alt: Total PyPI downloads
     :target: https://pepy.tech/project/circuitpython-{{ pypi_name }}
 
-.. image:: https://github.com/CircuitPython_{{ pypi_name | upper }}/workflows/Build%20CI/badge.svg
-    :target: https://github.com/CircuitPython_{{ pypi_name | upper }}/actions
+.. image:: https://github.com/jposada202020/CircuitPython_{{ pypi_name | upper }}/workflows/Build%20CI/badge.svg
+    :target: https://github.com/jposada202020/CircuitPython_{{ pypi_name | upper }}/actions
     :alt: Build Status
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
