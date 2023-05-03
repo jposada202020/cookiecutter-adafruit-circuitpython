@@ -7,7 +7,7 @@ import board
 import {{ cookiecutter.library_name}}
 
 i2c = board.I2C()  # uses board.SCL and board.SDA
-xxx = {{cookiecutter.library_name | upper}}.{{cookiecutter.library_name}}(i2c)
+xxx = {{cookiecutter.library_name}}.{{ cookiecutter.library_name | upper }}(i2c)
 
 while True:
     #print("Pressure: {:.2f}hPa".format(lps.pressure))

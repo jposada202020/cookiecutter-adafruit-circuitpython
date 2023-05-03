@@ -55,7 +55,7 @@ class {{ cookiecutter.library_name | upper }}:
     .. code-block:: python
 
         i2c = board.I2C()  # uses board.SCL and board.SDA
-        {{ cookiecutter.library_name }} = {{ cookiecutter.library_name | upper }}.{{ cookiecutter.library_name }}(i2c)
+        {{ cookiecutter.library_name }} = {{ cookiecutter.library_name}}.{{ cookiecutter.library_name | upper }}(i2c)
 
     Now you have access to the attributes
 
