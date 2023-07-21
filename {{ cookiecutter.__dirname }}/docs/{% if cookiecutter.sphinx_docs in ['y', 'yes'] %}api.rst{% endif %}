@@ -1,5 +1,5 @@
-{{ cookiecutter.library_name | upper }}
-=========================================
+CircuitPython {{ cookiecutter.library_name | upper }}
+===========================================================
 
 
 .. automodule:: {{ cookiecutter.library_name | lower | replace(" ", "_") }}
