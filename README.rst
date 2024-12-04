@@ -23,7 +23,7 @@ Prompts
 * ``github_user`` - GitHub user or organization which will host this repo. For example, Adafruit funded libraries should say "adafruit" here.
 * ``author_name`` - Who you are! Sets the copyright to you.
 * ``library_name`` - Shortest name for the library.
-* ``library_description`` - Write a sentence describing the purpose of this library 
+* ``library_description`` - Write a sentence describing the purpose of this library
 * ``sphinx_docs`` - Should the Sphinx based documentation be included in your repo? If so, enter ``y`` or ``yes`` to include the setup.py. For Adafruit libraries this defaults to Yes.
 
 
@@ -34,5 +34,3 @@ Prompts
     add your PyPI token to the repository secrets.  Set a secret named ``PYPI_USERNAME`` to
     ``__token__`` and a secret named ``PYPI_PASSWORD`` to your API token with the proper scope.
     Never share your API token anyone!
-
-
